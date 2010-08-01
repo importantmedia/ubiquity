@@ -3,11 +3,11 @@
 	<div id="im-navbar">
 		<div id="im-navbar-inner">
 			<div id="im-network">
-				<a href="<?= get_bloginfo('url') ?>" id="important_media_network">Important Media Network&nbsp;&nbsp;&nbsp;&darr;</a>
+				<a href="<?php echo  get_bloginfo('url') ?>" id="important_media_network">Important Media Network&nbsp;&nbsp;&nbsp;&darr;</a>
 			</div>
 			<div id="im-sociallinks">
 				<ul>
-					<li><a href="<?= get_permalink(ubiq_get_ID_by_slug('feeds')) ?>" class="icon icn16-rss" title="RSS">RSS</a></li>
+					<li><a href="<?php echo  get_permalink(ubiq_get_ID_by_slug('feeds')) ?>" class="icon icn16-rss" title="RSS">RSS</a></li>
 					<li><a href="http://twitter.com/importantmedia" class="icon icn16-twitter" name="@importantmedia" title="Twitter" target="_blank">@importantmedia</a></li>
 					<li><a href="http://www.facebook.com/pages/Important-Media/125494827481361" class="icon icn16-fb" title="Facebook" target="_blank">Facebook</a></li>
 					
@@ -18,10 +18,10 @@
 					<li>
 						<div class="dropdown">
 							<div class="dd-header">
-								<a href="<?= get_permalink(ubiq_get_ID_by_slug('about')) ?>" class="menu-title">About</a>
+								<a href="<?php echo  get_permalink(ubiq_get_ID_by_slug('about')) ?>" class="menu-title">About</a>
 								<div class="dd-body">
 									<ul class="dd-menu">
-										<li><a href="<?= get_permalink(ubiq_get_ID_by_slug('about')) ?>">Learn about IM</a></li>
+										<li><a href="<?php echo  get_permalink(ubiq_get_ID_by_slug('about')) ?>">Learn about IM</a></li>
 									<?php
 										$child_of = ubiq_get_ID_by_slug('about');
 										wp_list_pages("child_of=".$child_of."&echo=1&title_li=&depth=1");
@@ -35,11 +35,11 @@
 					<li>
 						<div class="dropdown">
 							<div class="dd-header">
-								<a href="<?= get_permalink(ubiq_get_ID_by_slug('write')) ?>" class="menu-title">Write</a>
+								<a href="<?php echo  get_permalink(ubiq_get_ID_by_slug('write')) ?>" class="menu-title">Write</a>
 							</div>
 							<div class="dd-body">
 								<ul class="dd-menu">
-								<li><a href="<?= get_permalink(ubiq_get_ID_by_slug('write')) ?>">Write with IM</a></li>
+								<li><a href="<?php echo  get_permalink(ubiq_get_ID_by_slug('write')) ?>">Write with IM</a></li>
 								<?php
 									$child_of = ubiq_get_ID_by_slug('write');
 									wp_list_pages("child_of=".$child_of."&echo=1&title_li=&depth=1");
@@ -52,11 +52,11 @@
 					<li>
 						<div class="dropdown">
 							<div class="dd-header">
-								<a href="<?=get_permalink(ubiq_get_ID_by_slug('advertise')); ?>" class="menu-title">Advertise</a>
+								<a href="<?php echo get_permalink(ubiq_get_ID_by_slug('advertise')); ?>" class="menu-title">Advertise</a>
 							</div>
 							<div class="dd-body">
 								<ul class="dd-menu">
-									<li><a href="<?=get_permalink(ubiq_get_ID_by_slug('advertise')); ?>">Advertise on IM</a></li>
+									<li><a href="<?php echo get_permalink(ubiq_get_ID_by_slug('advertise')); ?>">Advertise on IM</a></li>
 								<?php
 									$child_of = ubiq_get_ID_by_slug('advertise');
 									wp_list_pages("child_of=".$child_of."&echo=1&title_li=&depth=1");
@@ -76,7 +76,8 @@
 					<li>
 						<div class="dropdown">
 							<div class="dd-header dd-header-user">
-								<a href="<?php echo admin_url()?>" class="menu-title"><?php echo $current_user->user_login; ?>
+								<a href="<?php echo admin_url()?>" class="menu-title"><?php echo 
+								$current_user->user_login; ?>
 								<?php if ($img): ?><span  class="user_avatar"><img src="<?php echo $img?>" width="20" height="20"><?php endif; ?></span></a>
 							</div>
 							<div class="dd-body">
@@ -93,7 +94,7 @@
 					<li>
 						<div class="dropdown">
 							<div class="dd-header">
-								<a href="<?=admin_url()?>" class="menu-title">Login</a>
+								<a href="<?php echo admin_url()?>" class="menu-title">Login</a>
 							</div>
 						</div>
 					</li>
@@ -170,7 +171,7 @@
 						</div>
 					</div>
 					<?php switch_to_blog(1) ?>
-					<a href="<?=get_permalink(ubiq_get_ID_by_slug('about/faq')); ?>#maslow" id="what"><span class="q">?</span>What is this?</a>
+					<a href="<?php echo get_permalink(ubiq_get_ID_by_slug('about/faq')); ?>#maslow" id="what"><span class="q">?</span>What is this?</a>
 					<?php restore_current_blog() ?>
 				</div>
 			</div>
