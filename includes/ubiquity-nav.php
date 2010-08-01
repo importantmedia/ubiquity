@@ -76,7 +76,7 @@
 					<li>
 						<div class="dropdown">
 							<div class="dd-header dd-header-user">
-								<a href="<?=admin_url()?>" class="menu-title"><?=$current_user->user_login; ?>
+								<a href="<?php echo admin_url()?>" class="menu-title"><?php echo $current_user->user_login; ?>
 								<?php if ($img): ?><span  class="user_avatar"><img src="<?php echo $img?>" width="20" height="20"><?php endif; ?></span></a>
 							</div>
 							<div class="dd-body">
