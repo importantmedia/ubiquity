@@ -90,7 +90,7 @@
 							</div>
 						</div>
 					</li>
-					<? else: ?>
+					<?php else: ?>
 					<li>
 						<div class="dropdown">
 							<div class="dd-header">
