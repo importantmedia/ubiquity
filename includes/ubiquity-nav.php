@@ -77,12 +77,12 @@
 						<div class="dropdown">
 							<div class="dd-header dd-header-user">
 								<a href="<?=admin_url()?>" class="menu-title"><?=$current_user->user_login; ?>
-								<?php if ($img): ?><span  class="user_avatar"><img src="<?=$img?>" width="20" height="20"><?php endif; ?></span></a>
+								<?php if ($img): ?><span  class="user_avatar"><img src="<?php echo $img?>" width="20" height="20"><?php endif; ?></span></a>
 							</div>
 							<div class="dd-body">
 								<ul class="dd-menu">
-									<li><a href="<?=admin_url()?>" title="Dashboard">Dashboard</a></li>
-									<li><a href="<?=admin_url()?>profile.php" title="My Profile">My Profile</a></li>
+									<li><a href="<?php echo admin_url()?>" title="Dashboard">Dashboard</a></li>
+									<li><a href="<?php echo admin_url()?>profile.php" title="My Profile">My Profile</a></li>
 									<li><a href="http://p2.importantmedia.org" title="Watercooler">Watercooler</a></li>
 									<li><a href="<?php echo wp_logout_url( get_permalink() ); ?>" title="Logout">Logout</a></li>
 								</ul>

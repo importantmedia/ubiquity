@@ -16,7 +16,7 @@ add_action('wp_print_styles', 'ubiquity_styles_action');
 function ubiquity_print($function) {
 	global $wpdb;
 	$blogid = $wpdb->blogid;
-	$site_array = array(1,76,1248,1263,1275,1294,1318,1319,1323,1329,1331,1342);
+	$site_array = array(1,76,1248,1263,1275,1294,1318,1319,1323,1329,1331,1342,1335);
 	
 	if ((!is_admin()) && in_array($blogid, $site_array)) {
 		switch ($function) {
@@ -62,7 +62,7 @@ function ubiquity_print_tracker_bodybottom() { ?>
 function ubiquity_scripts_action() {
 	global $wpdb, $current_user;
 	$blogid = $wpdb->blogid;
-	$site_array = array(1,76,1248,1263,1275,1294,1318,1319,1323,1329,1331,1342);
+	$site_array = array(1,76,1248,1263,1275,1294,1318,1319,1323,1329,1331,1342,1335);
 	$ubiquity_plugin_url = trailingslashit( get_bloginfo('wpurl') ).PLUGINDIR.'/'. dirname( plugin_basename(__FILE__) );
 	
 	if ((!is_admin()) && in_array($blogid, $site_array)) {
@@ -82,14 +82,14 @@ function ubiquity_scripts_action() {
 function ubiquity_styles_action() {
 	global $wpdb;
 	$blogid = $wpdb->blogid;
-	$site_array = array(1,76,1248,1263,1275,1294,1318,1319,1323,1329,1331,1342);
+	$site_array = array(1,76,1248,1263,1275,1294,1318,1319,1323,1329,1331,1342,1335);
 	$ubiquity_plugin_url = trailingslashit( get_bloginfo('wpurl') ).PLUGINDIR.'/'. dirname( plugin_basename(__FILE__) );
 	if ((!is_admin()) && in_array($blogid, $site_array)) {
 		wp_register_style('ubiquity_style', $ubiquity_plugin_url.'/css/ubiquity_nav.css');
 		wp_enqueue_style('ubiquity_style');
 	}
 }
-
+ 
 function ubiquity_print_init_script() { ?>
 <script type="text/javascript">
 
