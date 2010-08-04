@@ -2,16 +2,36 @@
 /*
 Plugin Name: Ubiquity Toolbar
 Plugin URI: http://p2.importantmedia.org
-Description: The Important Media Network Toolbar.
-Version: 0.1
+Description: The Everything Plugin for the Important Media Network
+Version: 0.2
 Author: Jacob Luer
 Author URI: http://incatern.com
 License: MIT
 */
 
+
+if(is_super_admin()) {
+  add_action('admin_menu','ubiq_superadmin_menu');
+}
+
 add_action('wp_print_scripts', 'ubiquity_scripts_action', 50);
 add_action('wp_print_styles', 'ubiquity_styles_action');
 
+
+function ubiq_superadmin_menu() {
+	global $menu;
+
+	if (version_compare(get_bloginfo('version'), '2.9', '>='))
+	$menu[5] = array('', 'read', 'separator-dolores', '', 'wp-menu-separator');
+
+	add_menu_page(__('Ubiquity Network Control', 'ubiquity-network-controls'), __('Ubiquity', 'ubiquity'), 'update_core', 'ubiq-options', array('ubiquity_network_options', 'options_page'), '', 6); #wp
+
+	add_submenu_page('ubiq-options', __('Network Options', 'ubiq-netopts'), __('Network Options', 'ubiq-netopts'), 'update_core', 'ubiq-options-network', 'ubiq_options_network'); #wp
+}
+
+function ubiq_options_network(() {
+  echo 'Network Options';
+}
 
 function ubiquity_print($function) {
 	global $wpdb;
