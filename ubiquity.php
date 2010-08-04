@@ -29,7 +29,7 @@ function ubiq_superadmin_menu() {
 	add_submenu_page('ubiq-options', __('Network Options', 'ubiq-netopts'), __('Network Options', 'ubiq-netopts'), 'update_core', 'ubiq-options-network', 'ubiq_options_network'); #wp
 }
 
-function ubiq_options_network(() {
+function ubiq_options_network() {
   echo 'Network Options';
 }
 
