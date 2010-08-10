@@ -15,6 +15,8 @@ License: MIT
 
   add_action('wp_print_scripts', 'ubiquity_scripts_action', 50);
   add_action('wp_print_styles', 'ubiquity_styles_action');
+  
+  add_action('wp_footer','ubiquity_print_tracker_bodybottom');
 
 function ubiq_superadmin_menu() {
 	global $menu;
@@ -108,7 +110,7 @@ function ubiquity_print($function) {
 			ubiquity_print_tracker_bodytop();
 			break;
 		case "tracker_bodybottom":
-			ubiquity_print_tracker_bodybottom();
+			//ubiquity_print_tracker_bodybottom();
 			break;
 		case "navbar_header":
 		  ubiquity_print_tracker_bodytop();
@@ -129,7 +131,9 @@ function ubiquity_print_tracker_bodytop() { ?>
 <?php
 }
 
-function ubiquity_print_tracker_bodybottom() { ?>
+function ubiquity_print_tracker_bodybottom() { 
+  if (!get_option('ubiq_shownavbar') && !is_admin()) { return; }
+?>
 	<script type='text/javascript'> var mp_protocol = (('https:' == document.location.protocol) ? 'https://' : 'http://'); document.write(unescape('%3Cscript src="' + mp_protocol + 'api.mixpanel.com/site_media/js/api/mixpanel.js" type="text/javascript"%3E%3C/script%3E')); </script> <script type='text/javascript'> try {  var mpmetrics = new MixpanelLib('a32eb79d576c46f49e555808f0e9bf7a'); } catch(err) { null_fn = function () {}; var mpmetrics = {  track: null_fn,  track_funnel: null_fn,  register: null_fn,  register_once: null_fn, register_funnel: null_fn }; } </script>
 <?php
 }
