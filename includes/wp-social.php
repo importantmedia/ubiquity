@@ -19,7 +19,7 @@ function ubiq_add_socialgraph() {
       <meta property="og:image" content="<?php header_image(); ?>"/>
       <?php } ?>
       <meta property="og:site_name" content="<?php echo get_bloginfo('name') ?>"/> 
-      <meta property="og:description" content="<?php echo htmlentities(get_the_excerpt()) ?>"/>
+      <meta property="og:description" content="<?php echo bloginfo('description') ?>"/>
       <?php if (get_option('ubiq_fb_appid')) { ?>
       <meta property="fb:app_id" content="<?php echo get_option('ubiq_fb_appid') ?>" />
       <?php } ?>
