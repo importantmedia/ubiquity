@@ -19,7 +19,17 @@ require_once('includes/wp-widgets.php');
   
   add_action('wp_footer','ubiquity_print_tracker_bodybottom');
 
+add_shortcode('field', 'ubiq_shortcode_field');
 
+function ubiq_shortcode_field($atts) { 
+	extract(shortcode_atts(array(
+			'name' => 'bar',
+		), $atts));
+
+	$return = get_post_meta(get_the_ID(), $name, true);
+
+	return $return;
+}
 
 function ubiquity_print($function) {
   if (!get_option('ubiq_shownavbar') && !is_admin()) { return; }
