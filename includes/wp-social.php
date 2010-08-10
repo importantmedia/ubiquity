@@ -7,6 +7,11 @@ function ubiq_add_socialgraph() {
   if (!get_option('ubiq_fb_opengraph')) { return; }
 
   if (is_single()) {
+  
+    $image_id = get_post_thumbnail_id();
+    $image_url = wp_get_attachment_image_src($image_id,’large’, true);
+    echo $image_url[0];
+  
     ?>
       <meta property="og:title" content="<?php wp_title() ?>"/>
       <meta property="og:type" content="article"/>
@@ -14,7 +19,7 @@ function ubiq_add_socialgraph() {
       <?php
       if (get_the_post_thumbnail()) {
       ?>
-      <meta property="og:image" content="<?php echo get_the_post_thumbnail() ?>"/>
+      <meta property="og:image" content="<?php echo $image_url[0] ?>"/>
       <?php } else { ?>
       <meta property="og:image" content="<?php header_image(); ?>"/>
       <?php } ?>
