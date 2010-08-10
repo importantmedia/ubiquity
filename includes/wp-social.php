@@ -26,7 +26,7 @@ function ubiq_add_socialgraph() {
     ?>
       <meta property="og:title" content="<?php echo get_bloginfo('name') ?>"/>
       <meta property="og:type" content="website"/>
-      <meta property="og:url" content="<?php echo get_permalink() ?>"/>
+      <meta property="og:url" content="<?php bloginfo('url') ?>"/>
       <meta property="og:image" content="<?php header_image(); ?>"/>
       <meta property="og:site_name" content="<?php echo get_bloginfo('name') ?>"/> 
       <meta property="og:description" content="<?php echo bloginfo('description') ?>"/>
