@@ -26,6 +26,7 @@ function ubiq_register_settings() {
   
   register_setting('ubiq-social-settings','ubiq_fb_appid');
   register_setting('ubiq-social-settings','ubiq_fb_fanpageid');
+  register_setting('ubiq-social-settings','ubiq_fb_fanpageurl');
   
   register_setting('ubiq-social-settings','ubiq_fb_opengraph');
   register_setting('ubiq-social-settings','ubiq_fb_javascriptsdk');
@@ -175,6 +176,18 @@ function ubiq_options_social() {
           
           <tr valign="top">
             <th scope="row">
+              <label for="ubiq_fb_fanpageurl">Site Fan Page URL</label>
+            </th>
+            <td>
+              <label for"ubiq_fb_fanpageurl">
+                <input type="text" id="ubiq_fb_fanpageurl" name="ubiq_fb_fanpageurl" value="<?php echo get_option('ubiq_fb_fanpageurl') ?>" class="medium-text" />
+              </label>
+              <p class="description">Required for facebook widgets.</p>
+            </td>
+          </tr>
+          
+          <tr valign="top">
+            <th scope="row">
               <label for="ubiq_fb_opengraph">Open Graph Protocol</label>
             </th>
             <td>
@@ -207,6 +220,37 @@ function ubiq_options_social() {
           
         </tbody>
       </table>
+      
+      <h3>Twitter</h3>
+      <table class="form-table">
+        <tbody>
+          <tr valign="top">
+            <th scope="row">
+              <label for="ubiq_twtr_sitehandle">Site Handle</label>
+            </th>
+            <td>
+              <label for"ubiq_twtr_sitehandle">
+                @<input type="text" id="ubiq_twtr_sitehandle" name="ubiq_twtr_sitehandle" value="<?php echo get_option('ubiq_twtr_sitehandle') ?>" class="medium-text" />
+              </label>
+            </td>
+          </tr>
+          
+          <tr valign="top">
+            <th scope="row">
+              <label for="ubiq_twtr_appid">Site App ID</label>
+            </th>
+            <td>
+              <label for"ubiq_twtr_appid">
+                <input type="text" id="ubiq_twtr_appid" name="ubiq_twtr_appid" value="<?php echo get_option('ubiq_twtr_appid ') ?>" class="medium-text" />
+              </label>
+              <p class="description">Not currently in use.</p>
+            </td>
+          </tr>
+          
+          
+        </tbody>
+      </table>
+      
       
       <p class="submit">
         <input class="button-primary" type="submit" value="Save Changes" name="Submit"/>
