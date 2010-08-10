@@ -14,10 +14,8 @@ if(is_super_admin()) {
   add_action('admin_menu','ubiq_superadmin_menu');
 }
 
-if (!is_admin()) {
-  add_action('wp_print_scripts', 'ubiquity_scripts_action', 50);
-  add_action('wp_print_styles', 'ubiquity_styles_action');
-}
+add_action('wp_print_scripts', 'ubiquity_scripts_action', 50);
+add_action('wp_print_styles', 'ubiquity_styles_action');
 
 
 function ubiq_superadmin_menu() {
@@ -26,33 +24,13 @@ function ubiq_superadmin_menu() {
 	if (version_compare(get_bloginfo('version'), '2.9', '>='))
 	$menu[27] = array('', 'read', 'separator-dolores', '', 'wp-menu-separator');
 
-	//add_menu_page(__('Ubiquity Network Control', 'ubiquity-network-controls'), __('Ubiquity', 'ubiquity'), 'update_core', 'ubiquity', 'ubiq_options_network', '',28); #wp
+	add_menu_page(__('Ubiquity Network Control', 'ubiquity-network-controls'), __('Ubiquity', 'ubiquity'), 'update_core', 'ubiq-options', array('ubiquity_network_options', 'options_page'), '',28); #wp
 
-	//add_submenu_page('ubiq-options-network', __('Network Options', 'ubiq-netopts'), __('Network Options', 'ubiq-netopts'), 'update_core', 'ubiq_options_network', 'ubiq_options_network'); #wp
+	add_submenu_page('ubiq-options', __('Network Options', 'ubiq-netopts'), __('Network Options', 'ubiq-netopts'), 'update_core', 'ubiq-options-network', 'ubiq_options_network'); #wp
 }
 
 function ubiq_options_network() {
-  ?>
-  
-  
-  <div class="wrap">
-    <h2>Ubiquity Network Options</h2>
-    
-  
-  </div>
-  <?php
-}
-
-function ubiq_options_site() {
-  ?>
-  
-  
-  <div class="wrap">
-    <h2>Ubiquity Site Options</h2>
-    
-  
-  </div>
-  <?php
+  echo 'Network Options';
 }
 
 function ubiquity_print($function) {
