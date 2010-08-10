@@ -9,32 +9,23 @@
   background-color: #3b5998;
   padding: 10px;
 }
+.ubiq_fbstandard #facebook_widget .widget_header {
+  background-color: #ffffff;
+  -webkit-border-top-right-radius: 5px;
+  -webkit-border-top-left-radius: 5px;
+  -moz-border-radius-topright: 5px;
+  -moz-border-radius-topleft: 5px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
 .ubiq_fbstandard #facebook_widget .widget_header ul.tabs {
   list-style: none;
   line-height: 30px;
-  background-color: #cad4e7;
 }
 .ubiq_fbstandard #facebook_widget .widget_header ul.tabs li {
   float: left;
   padding: 0 10px;
   color: #3b5998;
-  cursor: pointer;
-}
-.ubiq_fbstandard #facebook_widget .widget_header ul.tabs li.fb_connect {
-  float: right;
-  padding: 0;
-}
-.ubiq_fbstandard #facebook_widget .widget_header ul.tabs li.fb_connect #facebook_login {
-  line-height: 20px;
-  margin: 5px 6px;
-  padding: 0 5px;
-  color: #cad4e7;
-  background-color: #fff;
-}
-.ubiq_fbstandard #facebook_widget .widget_header ul.tabs li.active {
-  background-color: #ffffff;
-  color: #3b5998;
-  cursor: default;
 }
 .ubiq_fbstandard #facebook_widget .widget_header ul.tabs:after {
   content: ".";

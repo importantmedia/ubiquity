@@ -65,36 +65,20 @@
     visibility: hidden;
 }
 
-  .ubiq_fbstandard {
+.ubiq_fbstandard {
   #facebook_widget {
   	background-color: @facebook_blue;
   	padding: 10px;
   	.widget_header {
+  	  background-color: @base_color;
+  	  .rounded-corners-north(5px);
   		ul.tabs {
   			list-style: none;
   			line-height: 30px;
-  			background-color: @facebook_blue_shaded;
   			li {
   				float: left;
   				padding: 0 10px;
   				color: @facebook_blue;
-  				cursor: pointer;
-  			}
-  			li.fb_connect {
-  				float: right;
-  				padding: 0;
-  				#facebook_login {
-  					line-height: 20px;
-  					margin: 5px 6px;
-  					padding: 0 5px;
-  					color: @facebook_blue_shaded;
-  					background-color: #fff;
-  				}
-  			}
-  			li.active { 
-  				background-color: @base_color;
-  				color: @facebook_blue;
-  				cursor: default;
   			}
   		}
   		ul.tabs:after {
