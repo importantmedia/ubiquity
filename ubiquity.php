@@ -88,6 +88,12 @@ function ubiquity_scripts_action() {
 }
 
 function ubiquity_styles_action() {
+  if (!is_admin()) {
+    $ubiquity_plugin_url = trailingslashit( get_bloginfo('wpurl') ).PLUGINDIR.'/'. dirname( plugin_basename(__FILE__) );
+    wp_register_style('ubiquity_widget_style', $ubiquity_plugin_url.'/css/ubiq_widgets.css');
+    wp_enqueue_style('ubiquity_widget_style');
+  }
+  
 	if (!get_option('ubiq_shownavbar') && !is_admin()) { return; }
 	
 	$ubiquity_plugin_url = trailingslashit( get_bloginfo('wpurl') ).PLUGINDIR.'/'. dirname( plugin_basename(__FILE__) );

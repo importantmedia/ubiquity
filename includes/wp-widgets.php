@@ -6,7 +6,8 @@ add_action('widgets_init', create_function('', 'return register_widget("UbiqFBSt
 class UbiqFBStandard extends WP_Widget {
   /** constructor */
   function UbiqFBStandard() {
-    parent::WP_Widget(false, $name = 'Ubiquity: Facebook');	
+    $widget_ops = array('classname' => 'ubiq_fbstandard', 'description' => __( 'Facebook social recomendations.') );
+    parent::WP_Widget('ubiq_fbstandard', __('Ubiquity: Facebook'), $widget_ops);	
   }
   
   /** @see WP_Widget::widget */

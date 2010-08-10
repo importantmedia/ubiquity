@@ -17,16 +17,18 @@
 					<li>
 						<div class="dropdown">
 							<div class="dd-header">
-								<a href="<?php echo  get_permalink(ubiq_get_ID_by_slug('about')) ?>" class="menu-title">About</a>
+								<a href="http://importantmedia.org/about/" class="menu-title">About</a>
 								<div class="dd-body">
+
 									<ul class="dd-menu">
-										<li><a href="<?php echo  get_permalink(ubiq_get_ID_by_slug('about')) ?>">Learn about IM</a></li>
-									<?php
-										$child_of = ubiq_get_ID_by_slug('about');
-										wp_list_pages("child_of=".$child_of."&echo=1&title_li=&depth=1");
-										
-									?>
+										<li><a href="http://importantmedia.org/about/">Learn about IM</a></li>
+									<li class="page_item page-item-6"><a href="http://importantmedia.org/about/announcements/" title="Announcements">Announcements</a></li>
+<li class="page_item page-item-623"><a href="http://importantmedia.org/about/faq/" title="FAQ">FAQ</a></li>
+<li class="page_item page-item-300"><a href="http://importantmedia.org/about/people/" title="People">People</a></li>
+<li class="page_item page-item-99"><a href="http://importantmedia.org/about/legal/" title="Legal">Legal</a></li>
+<li class="page_item page-item-463"><a href="http://importantmedia.org/about/contact/" title="Contact">Contact</a></li>
 									</ul>
+
 								</div>
 							</div>
 						</div>
@@ -34,16 +36,17 @@
 					<li>
 						<div class="dropdown">
 							<div class="dd-header">
-								<a href="<?php echo  get_permalink(ubiq_get_ID_by_slug('write')) ?>" class="menu-title">Write</a>
+								<a href="http://importantmedia.org/write/" class="menu-title">Write</a>
+
 							</div>
 							<div class="dd-body">
 								<ul class="dd-menu">
-								<li><a href="<?php echo  get_permalink(ubiq_get_ID_by_slug('write')) ?>">Write with IM</a></li>
-								<?php
-									$child_of = ubiq_get_ID_by_slug('write');
-									wp_list_pages("child_of=".$child_of."&echo=1&title_li=&depth=1");
-								
-								?>
+								<li><a href="http://importantmedia.org/write/">Write with IM</a></li>
+								<li class="page_item page-item-393"><a href="http://importantmedia.org/write/contributors/" title="Guest Contributors">Guest Contributors</a></li>
+<li class="page_item page-item-386"><a href="http://importantmedia.org/write/authors/" title="Freelance Authors">Freelance Authors</a></li>
+<li class="page_item page-item-362"><a href="http://importantmedia.org/write/editors/" title="Site Editors">Site Editors</a></li>
+<li class="page_item page-item-406"><a href="http://importantmedia.org/write/apply/" title="Apply">Apply</a></li>
+
 								</ul>
 							</div>
 						</div>
@@ -51,16 +54,17 @@
 					<li>
 						<div class="dropdown">
 							<div class="dd-header">
-								<a href="<?php echo get_permalink(ubiq_get_ID_by_slug('advertise')); ?>" class="menu-title">Advertise</a>
+								<a href="http://importantmedia.org/advertise/" class="menu-title">Advertise</a>
+
 							</div>
 							<div class="dd-body">
 								<ul class="dd-menu">
-									<li><a href="<?php echo get_permalink(ubiq_get_ID_by_slug('advertise')); ?>">Advertise on IM</a></li>
-								<?php
-									$child_of = ubiq_get_ID_by_slug('advertise');
-									wp_list_pages("child_of=".$child_of."&echo=1&title_li=&depth=1");
-									
-								?>
+									<li><a href="http://importantmedia.org/advertise/">Advertise on IM</a></li>
+								<li class="page_item page-item-314"><a href="http://importantmedia.org/advertise/specs/" title="Advertising Specs">Advertising Specs</a></li>
+<li class="page_item page-item-317"><a href="http://importantmedia.org/advertise/rates/" title="Rates">Rates</a></li>
+<li class="page_item page-item-322"><a href="http://importantmedia.org/advertise/calendar/" title="Calendar">Calendar</a></li>
+<li class="page_item page-item-511"><a href="http://importantmedia.org/advertise/quote/" title="Get a Quote">Get a Quote</a></li>
+
 								</ul>
 							</div>
 							
