@@ -19,17 +19,6 @@ if (!is_admin()) {
   add_action('wp_print_styles', 'ubiquity_styles_action');
 }
 
-add_shortcode('field', 'ubiq_shortcode_field');
-
-function ubiq_shortcode_field($atts) { 
-	extract(shortcode_atts(array(
-			'name' => 'bar',
-		), $atts));
-
-	$return = get_post_meta(get_the_ID(), $name, true);
-
-	return $return;
-}
 
 function ubiq_superadmin_menu() {
 	global $menu;
