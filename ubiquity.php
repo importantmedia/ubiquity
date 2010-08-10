@@ -27,7 +27,7 @@ function ubiq_superadmin_menu() {
 
 	add_menu_page(__('Ubiquity Network Control', 'ubiquity-network-controls'), __('Network Options', 'ubiquity'), 'update_core', 'ubiq_options_network', array('ubiquity_network_options', 'ubiq_options_site'), '',28); #wp
 
-	add_submenu_page('ubiq-options', __('Network Options', 'ubiq-netopts'), __('Site Options', 'ubiq-netopts'), 'update_core', 'ubiq-options-network', 'ubiq_options_site'); #wp
+	add_submenu_page('ubiq_options_network', __('Network Options', 'ubiq-netopts'), __('Site Options', 'ubiq-netopts'), 'update_core', 'ubiq-options-network', 'ubiq_options_site'); #wp
 }
 
 function ubiq_options_network() {
