@@ -12,11 +12,6 @@ class UbiqFBStandard extends WP_Widget {
   /** @see WP_Widget::widget */
   function widget($args, $instance) {		
     extract( $args );
-    
-    $ubiquity_plugin_url = trailingslashit( get_bloginfo('wpurl') ).PLUGINDIR.'/'. dirname( plugin_basename(__FILE__) );
-    wp_register_style('ubiq_fbstandard_style', $ubiquity_plugin_url.'/css/widget-fb-standard.css');
-    wp_enqueue_style('ubiq_fbstandard_style');
-    
     ?>
     <?php echo $before_widget; ?>
     <?php include('widgets/fb-standard.php') ?>
