@@ -98,22 +98,22 @@ function ubiq_options_social() {
 }
 
 function ubiquity_print($function) {
-	global $wpdb;
-	$blogid = $wpdb->blogid;
-	$site_array = array(1,76,1248,1263,1275,1294,1318,1319,1323,1329,1331,1342,1335);
-	
-	if ((!is_admin()) && in_array($blogid, $site_array)) {
-		switch ($function) {
-			case "navigation":
-				ubiquity_print_navigation();
-				break;
-			case "tracker_bodytop":
-				ubiquity_print_tracker_bodytop();
-				break;
-			case "tracker_bodybottom":
-				ubiquity_print_tracker_bodybottom();
-				break;
-		}
+  if (!get_option('ubiq_shownavbar') && !is_admin()) { return; }
+
+	switch ($function) {
+		case "navigation": //legacy
+			ubiquity_print_navigation();
+			break;
+		case "tracker_bodytop": //legacy
+			ubiquity_print_tracker_bodytop();
+			break;
+		case "tracker_bodybottom":
+			ubiquity_print_tracker_bodybottom();
+			break;
+		case "navbar_header":
+		  ubiquity_print_tracker_bodytop();
+		  ubiquity_print_navigation();
+		  break;
 	}
 }
 
@@ -131,53 +131,36 @@ function ubiquity_print_tracker_bodytop() { ?>
 
 function ubiquity_print_tracker_bodybottom() { ?>
 	<script type='text/javascript'> var mp_protocol = (('https:' == document.location.protocol) ? 'https://' : 'http://'); document.write(unescape('%3Cscript src="' + mp_protocol + 'api.mixpanel.com/site_media/js/api/mixpanel.js" type="text/javascript"%3E%3C/script%3E')); </script> <script type='text/javascript'> try {  var mpmetrics = new MixpanelLib('a32eb79d576c46f49e555808f0e9bf7a'); } catch(err) { null_fn = function () {}; var mpmetrics = {  track: null_fn,  track_funnel: null_fn,  register: null_fn,  register_once: null_fn, register_funnel: null_fn }; } </script>
-	<script type="text/javascript">
-	mpmetrics.register_funnel('IM Toolbar Funnel', [
-	        'Open Toolbar', 
-	        'Select Category', 
-	        'Visit Site'
-	    ]
-	);
-	
-	</script>
 <?php
 }
 
 function ubiquity_scripts_action() {
-	global $wpdb, $current_user;
-	$blogid = $wpdb->blogid;
-	$site_array = array(1,76,1248,1263,1275,1294,1318,1319,1323,1329,1331,1342,1335);
-	$ubiquity_plugin_url = trailingslashit( get_bloginfo('wpurl') ).PLUGINDIR.'/'. dirname( plugin_basename(__FILE__) );
+	if (!get_option('ubiq_shownavbar') && !is_admin()) { return; }
+	global $user_login;
 	
-	if ((!is_admin()) && in_array($blogid, $site_array)) {
-		$local_user = '';
-		if(is_user_logged_in()) {
-			get_currentuserinfo();
-			$local_user = $current_user->user_login;
-		}
-		
-		wp_enqueue_script('ubiquity_jplug', $ubiquity_plugin_url.'/scripts/ubiquity.jplug.1.0.js', array('jquery'));
-		wp_localize_script( 'ubiquity_jplug', 'UbiquitySettings', array(
-			  	'username' => $local_user
-			));
+	$ubiquity_plugin_url = trailingslashit( get_bloginfo('wpurl') ).PLUGINDIR.'/'. dirname( plugin_basename(__FILE__) );
+
+	$local_user = '';
+	if(is_user_logged_in()) {
+		get_currentuserinfo();
+		$local_user = $user_login;
 	}
+	wp_enqueue_script('ubiquity_jplug', $ubiquity_plugin_url.'/scripts/ubiquity.jplug.1.0.js', array('jquery'));
+	wp_localize_script( 'ubiquity_jplug', 'UbiquitySettings', array(
+		  	'username' => $local_user
+		));
 }
 
 function ubiquity_styles_action() {
-	global $wpdb;
-	$blogid = $wpdb->blogid;
-	$site_array = array(1,76,1248,1263,1275,1294,1318,1319,1323,1329,1331,1342,1335);
+	if (!get_option('ubiq_shownavbar') && !is_admin()) { return; }
+	
 	$ubiquity_plugin_url = trailingslashit( get_bloginfo('wpurl') ).PLUGINDIR.'/'. dirname( plugin_basename(__FILE__) );
-	if ((!is_admin()) && in_array($blogid, $site_array)) {
-		wp_register_style('ubiquity_style', $ubiquity_plugin_url.'/css/ubiquity_nav.css');
-		wp_enqueue_style('ubiquity_style');
-	}
+	wp_register_style('ubiquity_style', $ubiquity_plugin_url.'/css/ubiquity_nav.css');
+	wp_enqueue_style('ubiquity_style');
 }
  
 function ubiquity_print_init_script() { ?>
-<script type="text/javascript">
 
-</script>
 <?php
 }
 

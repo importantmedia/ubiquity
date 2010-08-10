@@ -1,4 +1,3 @@
-<?php switch_to_blog(1) ?>
 <div id="im-navbar-wrap">
 	<div id="im-navbar">
 		<div id="im-navbar-inner">
@@ -67,7 +66,6 @@
 							
 						</div>
 					</li>
-					<?php restore_current_blog() ?>
 					<?php if(is_user_logged_in()): ?>
 					<?php global $current_user;
 					      get_currentuserinfo();
@@ -170,9 +168,7 @@
 							</ul>
 						</div>
 					</div>
-					<?php switch_to_blog(1) ?>
 					<a href="<?php echo get_permalink(ubiq_get_ID_by_slug('about/faq')); ?>#maslow" id="what"><span class="q">?</span>What is this?</a>
-					<?php restore_current_blog() ?>
 				</div>
 			</div>
 		</div>
