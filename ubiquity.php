@@ -10,13 +10,11 @@ License: MIT
 */
 
 
-if(is_super_admin()) {
+
   add_action('admin_menu','ubiq_superadmin_menu');
-}
 
-add_action('wp_print_scripts', 'ubiquity_scripts_action', 50);
-add_action('wp_print_styles', 'ubiquity_styles_action');
-
+  add_action('wp_print_scripts', 'ubiquity_scripts_action', 50);
+  add_action('wp_print_styles', 'ubiquity_styles_action');
 
 function ubiq_superadmin_menu() {
 	global $menu;
@@ -24,13 +22,79 @@ function ubiq_superadmin_menu() {
 	if (version_compare(get_bloginfo('version'), '2.9', '>='))
 	$menu[27] = array('', 'read', 'separator-dolores', '', 'wp-menu-separator');
 
-	add_menu_page(__('Ubiquity Network Control', 'ubiquity-network-controls'), __('Ubiquity', 'ubiquity'), 'update_core', 'ubiq-options', array('ubiquity_network_options', 'options_page'), '',28); #wp
+	add_menu_page(__('Ubiquity Network Configuration', 'ubiquity-network-config'), __('Ubiquity', 'ubiquity-title'), 'update_core', 'ubiquity-network-config', 'ubiq_options_network', '',28); #wp
 
-	add_submenu_page('ubiq-options', __('Network Options', 'ubiq-netopts'), __('Network Options', 'ubiq-netopts'), 'update_core', 'ubiq-options-network', 'ubiq_options_network'); #wp
+	add_submenu_page('ubiquity-network-config', __('Network Options', 'ubiq-netopts'), __('Network Options', 'ubiq-netopts'), 'update_core', 'ubiquity-network-config', 'ubiq_options_network'); #wp
+	add_submenu_page('ubiquity-network-config', __('Analytics Options', 'ubiq-socialopts'), __('Analytics Options', 'ubiq-analyticsopts'), 'update_core', 'ubiquity-analytics-config', 'ubiq_options_analytics'); #wp
+	add_submenu_page('ubiquity-network-config', __('Social Identities', 'ubiq-socialopts'), __('Social Identities', 'ubiq-socialopts'), 'update_core', 'ubiquity-social-config', 'ubiq_options_social'); #wp
+	
+	add_action('admin_init','ubiq_register_settings');
+	
+}
+
+function ubiq_register_settings() {
+  register_setting('ubiq-network-settings','ubiq_shownavbar');
 }
 
 function ubiq_options_network() {
-  echo 'Network Options';
+  ?>
+  
+  
+  <div class="wrap">
+    <h2>Ubiquity Network Options</h2>
+    <form name="ubiq-net-options" method="post" action="options.php">
+      <?php settings_fields('ubiq-network-settings') ?>
+      
+      <table class="form-table">
+        <tbody>
+          <tr valign="top">
+            <th scope="row">
+              <label for="navbar_enabled">Network Navigation Bar</label>
+            </th>
+            <td>
+              <label for"navbar_enabled">
+                <?php 
+                  $check_shownavbar = '';
+                  if (get_option('ubiq_shownavbar'))
+                    $check_shownavbar = ' checked="checked" ';
+                ?>
+                <input type="checkbox" id="ubiq_shownavbar" name="ubiq_shownavbar" value="ubiq_shownavbar" <?php echo $check_shownavbar ?> /> Show NavBar
+              </label>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="submit">
+        <input class="button-primary" type="submit" value="Save Changes" name="Submit"/>
+      </p>
+    </form>
+  
+  </div>
+  <?php
+}
+
+function ubiq_options_analytics() {
+  ?>
+  
+  
+  <div class="wrap">
+    <h2>Ubiquity Analytics Options</h2>
+    
+  
+  </div>
+  <?php
+}
+
+function ubiq_options_social() {
+  ?>
+  
+  
+  <div class="wrap">
+    <h2>Ubiquity Social Options</h2>
+    
+  
+  </div>
+  <?php
 }
 
 function ubiquity_print($function) {
