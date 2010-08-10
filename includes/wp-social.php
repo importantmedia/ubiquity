@@ -1,9 +1,11 @@
 <?php
 
 add_action('wp_head','ubiq_add_socialgraph');
-
+add_action('wp_footer','ubiq_fb_javascriptapi');
 
 function ubiq_add_socialgraph() {
+  if (!get_option('ubiq_fb_opengraph')) { return; }
+
   if (is_single()) {
     ?>
       <meta property="og:title" content="<?php wp_title() ?>"/>
@@ -35,6 +37,27 @@ function ubiq_add_socialgraph() {
       <?php } ?>
     <?php
   }
+}
+
+function ubiq_fb_javascriptapi() {
+  if (!get_option('ubiq_fb_javascriptsdk') && !get_option('ubiq_fb_appid') && !is_admin()) { return; }
+  
+  $fbAppId = get_option('ubiq_fb_appid');
+  ?>
+  <div id="fb-root"></div>
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({appId: '<?php echo $fbAppId ?>', status: true, cookie: true,
+               xfbml: true});
+    };
+    (function() {
+      var e = document.createElement('script'); e.async = true;
+      e.src = document.location.protocol +
+        '//connect.facebook.net/en_US/all.js';
+      document.getElementById('fb-root').appendChild(e);
+    }());
+  </script>
+  <?php
 }
 
 ?>

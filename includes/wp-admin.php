@@ -26,6 +26,10 @@ function ubiq_register_settings() {
   
   register_setting('ubiq-social-settings','ubiq_fb_appid');
   register_setting('ubiq-social-settings','ubiq_fb_fanpageid');
+  
+  register_setting('ubiq-social-settings','ubiq_fb_opengraph');
+  register_setting('ubiq-social-settings','ubiq_fb_javascriptsdk');
+  
   register_setting('ubiq-social-settings','ubiq_twtr_sitehandle');
   register_setting('ubiq-social-settings','ubiq_twtr_appid');
 }
@@ -169,8 +173,41 @@ function ubiq_options_social() {
             </td>
           </tr>
           
+          <tr valign="top">
+            <th scope="row">
+              <label for="ubiq_fb_opengraph">Open Graph Protocol</label>
+            </th>
+            <td>
+              <label for"ubiq_fb_opengraph">
+                <?php 
+                  $check_shownavbar = '';
+                  if (get_option('ubiq_fb_opengraph'))
+                    $check_shownavbar = ' checked="checked" ';
+                ?>
+                <input type="checkbox" id="ubiq_fb_opengraph" name="ubiq_fb_opengraph" value="ubiq_fb_opengraph" <?php echo $check_shownavbar ?> /> Enable Open Graph Protocol Tags
+              </label>
+            </td>
+          </tr>
+          
+          <tr valign="top">
+            <th scope="row">
+              <label for="ubiq_fb_javascriptsdk">Javascript SDK</label>
+            </th>
+            <td>
+              <label for"ubiq_fb_javascriptsdk">
+                <?php 
+                  $check_shownavbar = '';
+                  if (get_option('ubiq_fb_javascriptsdk'))
+                    $check_shownavbar = ' checked="checked" ';
+                ?>
+                <input type="checkbox" id="ubiq_fb_javascriptsdk" name="ubiq_fb_javascriptsdk" value="ubiq_fb_javascriptsdk" <?php echo $check_shownavbar ?> /> Enable FB Javascript SDK &amp; FBML (requires FB App ID)
+              </label>
+            </td>
+          </tr>
+          
         </tbody>
       </table>
+      
       <p class="submit">
         <input class="button-primary" type="submit" value="Save Changes" name="Submit"/>
       </p>

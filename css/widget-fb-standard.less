@@ -1,0 +1,126 @@
+@facebook_blue: #3B5998;
+@facebook_blue_shaded: #CAD4E7;
+@facebook_blue_highlight: #9DACCE;
+@base_color: #fff;
+
+
+.rounded-corners(@radius: 5px) {
+	-webkit-border-radius: @radius;
+	-moz-border-radius: @radius;
+	border-radius: @radius;
+}
+
+.rounded-corners-south(@radius: 5px) {
+	-webkit-border-bottom-right-radius: @radius;
+	-webkit-border-bottom-left-radius: @radius;
+	-moz-border-radius-bottomright: @radius;
+	-moz-border-radius-bottomleft: @radius;
+	border-bottom-right-radius: @radius;
+	border-bottom-left-radius: @radius;
+}
+
+.rounded-corners-north(@radius: 5px) {
+	-webkit-border-top-right-radius: @radius;
+	-webkit-border-top-left-radius: @radius;
+	-moz-border-radius-topright: @radius;
+	-moz-border-radius-topleft: @radius;
+	border-top-right-radius: @radius;
+	border-top-left-radius: @radius;
+}
+.rounded-corners-east(@radius: 5px) {
+	-webkit-border-top-right-radius: @radius;
+	-webkit-border-bottom-right-radius: @radius;
+	-moz-border-radius-topright: @radius;
+	-moz-border-radius-bottomright: @radius;
+	border-top-right-radius: @radius;
+	border-bottom-right-radius: @radius;
+}
+
+.rounded-corners-nw(@radius: 5px) {
+	-webkit-border-top-left-radius: 3px;
+	-moz-border-radius-topleft: 3px;
+	border-top-left-radius: 3px;
+}
+
+
+.box-shadow(@x: 0px, @y: 0px, @feather: 0px, @bcolor: #000000) {
+	box-shadow: @x @y @feather @bcolor;
+	-moz-box-shadow:  @x @y @feather @bcolor;
+	-webkit-box-shadow: @x @y @feather @bcolor;
+} 
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearme() {
+	content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+#facebook_widget {
+	background-color: @facebook_blue;
+	padding: 10px;
+	.widget_header {
+		ul.tabs {
+			list-style: none;
+			line-height: 30px;
+			background-color: @facebook_blue_shaded;
+			li {
+				float: left;
+				padding: 0 10px;
+				color: @facebook_blue;
+				cursor: pointer;
+			}
+			li.fb_connect {
+				float: right;
+				padding: 0;
+				#facebook_login {
+					line-height: 20px;
+					margin: 5px 6px;
+					padding: 0 5px;
+					color: @facebook_blue_shaded;
+					background-color: #fff;
+				}
+			}
+			li.active { 
+				background-color: @base_color;
+				color: @facebook_blue;
+				cursor: default;
+			}
+		}
+		ul.tabs:after {
+			.clearme();
+		}
+	}
+	.widget_header:after {
+		.clearme();
+	}
+	.widget_body {
+		background-color: @base_color;
+		height: 300px;
+		ul.panels {
+			list-style: none;
+			li {
+				display: none;
+				height: 300px;
+			}
+			li.active {
+				display: block;
+			}
+		}
+	}
+	.widget_masthead {
+		.rounded-corners-north(3px);
+		padding:10px;
+		background-color: @facebook_blue_shaded;
+	}
+
+}
