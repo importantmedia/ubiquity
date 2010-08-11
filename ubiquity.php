@@ -13,11 +13,15 @@ require_once('includes/wp-admin.php');
 require_once('includes/wp-social.php');
 require_once('includes/wp-widgets.php');
 
+// nav bar
+add_action('wp_print_scripts', 'ubiquity_scripts_action', 50);
+add_action('wp_print_styles', 'ubiquity_styles_action');
+add_action('wp_footer','ubiquity_print_tracker_bodybottom');
 
-  add_action('wp_print_scripts', 'ubiquity_scripts_action', 50);
-  add_action('wp_print_styles', 'ubiquity_styles_action');
-  
-  add_action('wp_footer','ubiquity_print_tracker_bodybottom');
+
+// analytics
+add_action('wp_head','ubiquity_print_ga_tracking_header');
+add_action('wp_footer','ubiquity_print_ga_tracking_footer');
 
 add_shortcode('field', 'ubiq_shortcode_field');
 
@@ -29,6 +33,44 @@ function ubiq_shortcode_field($atts) {
 	$return = get_post_meta(get_the_ID(), $name, true);
 
 	return $return;
+}
+
+function ubiquity_print_ga_tracking_footer() {
+  if (get_option('ubiq_ga_siteid')) {
+  ?>
+  <script type="text/javascript">  (function() {
+      var ga = document.createElement('script');     ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:'   == document.location.protocol ? 'https://ssl'   : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+  </script>
+  <?php
+  }
+}
+
+function ubiquity_print_ga_tracking_header() {
+  if (get_option('ubiq_ga_siteid')) {
+  ?>
+  <script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+        _gaq.push(
+          ['_setAccount', '<?php echo get_option('ubiq_ga_siteid') ?>'],
+          ['_setAllowHash', false],
+          ['_setDomainName', '.faildrill.com'],
+          ['_setAllowLinker',true],
+          ['_trackPageview'],
+          <?php if(get_option('ubiq_ga_rollup')) { ?>
+          ['b._setAccount', 'UA-17151946-1'],
+          ['b._setAllowHash', false],
+          ['b._setDomainName', '.faildrill.com'],
+          ['b._setAllowLinker',true],
+          ['b._trackPageview']
+          <?php } ?>
+        );
+  </script>
+  <?php
+  }
 }
 
 function ubiquity_print($function) {
