@@ -12,7 +12,7 @@ function ubiq_add_socialgraph() {
     $image_url = wp_get_attachment_image_src($image_id,’large’, true);
   
     ?>
-      <meta property="og:title" content="<?php wp_title() ?>"/>
+      <meta property="og:title" content="<?php the_title() ?>"/>
       <meta property="og:type" content="article"/>
       <meta property="og:url" content="<?php echo get_permalink() ?>"/>
       <?php
