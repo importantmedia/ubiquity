@@ -3,6 +3,7 @@
   <div id="facebook_like">
     <fb:like-box profile_id="<?php echo get_option('ubiq_fb_fanpageid') ?>" stream="false" header="true" connections="0" width="195" heigh="75"></fb:like-box>
   </div>
+  <?php } ?>
   <div id="social_buttons">
     <ul>
       <?php if (get_option('ubiq_twtr_sitehandle')) { ?>
@@ -11,5 +12,4 @@
       <li><a href="<?php bloginfo('rss2_url') ?>" class="rss_32" title="RSS">RSS</a></li>
     </ul>
   </div>
-  <?php } ?>
 </div>
