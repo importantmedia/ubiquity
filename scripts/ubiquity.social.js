@@ -9,7 +9,7 @@
   function FB_share(url) {
     var share = {
       method: 'stream.share',
-      u: 'http://google.com',//url,
+      u: url,
       display: 'popup'
     };
     
@@ -20,7 +20,7 @@
   
     $('.ubiq_button_fb').each(function(index) {
       var $this = $(this);
-      url = 'http://google.com'; // $(this).attr('href') 
+      url = $(this).attr('href');
       fbquery = FB.Data.query('SELECT share_count FROM link_stat WHERE url="{0}"', url);
       
       fbquery.wait(function(rows){
