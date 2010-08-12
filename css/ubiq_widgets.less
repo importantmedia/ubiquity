@@ -108,5 +108,71 @@
   		background-color: @facebook_blue_shaded;
   	}
   
+  }  
+}
+
+.ubiq_button_fb {
+  padding: 0em;
+  line-height: 16px;
+  border: 1px solid @facebook_blue_shaded;
+  background-color: #ECEEF5;
+  color: @facebook_blue;
+  .rounded-corners(3px);
+  cursor: pointer;
+  float: left;
+  margin-right: 5px;
+  .sharetext {
+    float:left;
+    margin-top: 2px;
+  }
+  .fbicon {
+    float: left;
+    width: 14px;
+    height: 14px;
+    background: url('images/fb_micro.png') no-repeat 0 -47px transparent;
+    margin: 2px 4px;
+  }
+  .count {
+    float: left;
+    margin: 2px 6px 0;
+    font-weight: bold;
+  }
+  &:hover {
+    border: 1px solid @facebook_blue_highlight;
+    background-color: #ECEEF5;
+  }
+}
+
+#ubiq_sitecard {
+  height: 65px;
+  #facebook_like {
+    float: left;
+  }
+  #social_buttons {
+    float: right;
+    margin-top: 20px;
+    ul {
+      list-style: none;
+      li {
+        float: left;
+        padding: 0 10px 0 0;
+        .twtr_32 {
+          width: 32px;
+          height: 32px;
+          text-indent: 999px;
+          overflow: hidden;
+          display: block;
+          background: url('images/icons/32/twitter.png') no-repeat 0 0 transparent;
+        }
+        .rss_32 {
+          width: 32px;
+          height: 32px;
+          text-indent: 999px;
+          overflow: hidden;
+          display: block;
+          background: url('images/icons/32/rss.png') no-repeat 0 0 transparent;
+        }
+      }
+    }
   }
 }

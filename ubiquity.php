@@ -113,6 +113,12 @@ function ubiquity_print_tracker_bodybottom() {
 }
 
 function ubiquity_scripts_action() {
+  if (!is_admin()) {
+    $ubiquity_plugin_url = trailingslashit( get_bloginfo('wpurl') ).PLUGINDIR.'/'. dirname( plugin_basename(__FILE__) );
+    wp_enqueue_script('ubiquity_social_script', $ubiquity_plugin_url.'/scripts/ubiquity.social.js',array('jquery'));
+  }
+
+
 	if (!get_option('ubiq_shownavbar') && !is_admin()) { return; }
 	global $user_login;
 	

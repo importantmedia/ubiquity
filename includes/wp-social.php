@@ -64,4 +64,12 @@ function ubiq_fb_javascriptapi() {
   <?php
 }
 
+function ubiq_sitecard() {
+  include('widgets/sitecard.php');
+}
+
+function ubiq_social_buttons() {
+  include('widgets/social_buttons.php');
+}
+
 ?>
