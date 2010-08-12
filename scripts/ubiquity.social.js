@@ -17,7 +17,7 @@
   }
 
   $(document).ready(function() {
-  
+    /*
     $('.ubiq_button_fb').each(function(index) {
       var $this = $(this);
       url = $(this).attr('href');
@@ -30,13 +30,15 @@
         }
       });
     });
-  
+    */
+   
     $('.ubiq_button_fb').bind('click',function() {
       var hasSession;
         hasSession = FB.getSession();
       
       FB_share($(this).attr('href'));
       return false;
+      /*
       if(!hasSession) {
         FB.login(function(response) {
           if (response.session) {
@@ -49,6 +51,7 @@
         FB_share($(this).attr('href'));
       }
       return false;
+      */
     });
     
   });
