@@ -1,7 +1,7 @@
 <div id="ubiq_sitecard" class="clearfix">
   <?php if(get_option('ubiq_fb_fanpageid')) { ?>
   <div id="facebook_like">
-    <fb:like-box profile_id="<?php echo get_option('ubiq_fb_fanpageid') ?>" stream="false" header="true" connections="0" width="195" heigh="85"></fb:like-box>
+    <fb:like-box profile_id="<?php echo get_option('ubiq_fb_fanpageid') ?>" stream="false" header="true" connections="0" width="195" height="85"></fb:like-box>
   </div>
   <?php } ?>
   <div id="social_buttons">
