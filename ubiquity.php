@@ -50,7 +50,7 @@ function ubiquity_print_ga_tracking_footer() {
 
 function ubiquity_print_ga_tracking_header() {
   if (get_option('ubiq_ga_siteid')) {
-    $blogurl = get_bloginfo( 'url' );
+    $blogurl = preg_replace("/^https?:\/\/(.+)$/i","\\1", get_bloginfo( 'url' ));
   ?>
   <script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
   <script type="text/javascript">
