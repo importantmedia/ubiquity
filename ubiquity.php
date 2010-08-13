@@ -50,6 +50,7 @@ function ubiquity_print_ga_tracking_footer() {
 
 function ubiquity_print_ga_tracking_header() {
   if (get_option('ubiq_ga_siteid')) {
+    $blogurl = get_bloginfo( 'url' );
   ?>
   <script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
   <script type="text/javascript">
@@ -57,13 +58,12 @@ function ubiquity_print_ga_tracking_header() {
         _gaq.push(
           ['_setAccount', '<?php echo get_option('ubiq_ga_siteid') ?>'],
           ['_setAllowHash', false],
-          ['_setDomainName', '.faildrill.com'],
+          ['_setDomainName', '.<?php echo $blogurl ?>'],
           ['_setAllowLinker',true],
-          ['_trackPageview'],
-          <?php if(get_option('ubiq_ga_rollup')) { ?>
+          ['_trackPageview']<?php if(get_option('ubiq_ga_rollup')) { ?>,
           ['b._setAccount', 'UA-17151946-1'],
           ['b._setAllowHash', false],
-          ['b._setDomainName', '.faildrill.com'],
+          ['b._setDomainName', '.<?php echo $blogurl ?>'],
           ['b._setAllowLinker',true],
           ['b._trackPageview']
           <?php } ?>
