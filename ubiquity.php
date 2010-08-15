@@ -15,6 +15,7 @@ require_once('includes/wp-widgets.php');
 
 // nav bar
 add_action('wp_print_scripts', 'ubiquity_scripts_action', 50);
+add_action('wp_print_scripts', 'ubiq_print_liftium_header', 75);
 add_action('wp_print_styles', 'ubiquity_styles_action');
 add_action('wp_footer','ubiquity_print_tracker_bodybottom');
 
@@ -165,6 +166,16 @@ function ubiq_get_ID_by_slug($page_slug) {
 
 function ubiq_custom_avatar($id) {
 	if (function_exists('author_avatar_url')) return author_avatar_url($id);
+}
+
+function ubiq_print_liftium_header() {
+  if (!is_admin() && get_option('ubiq_liftium_pubid')) {
+    ?>
+    <script>LiftiumOptions = {pubid:<?php echo get_option('ubiq_liftium_pubid') ?>, placement : "<?php echo get_option('ubiq_liftium_placement') ?>"}</script>
+    <script src="http://delivery.importantmedia.org/js/Liftium.js"></script>
+    
+    <?php
+  }
 }
 
 ?>

@@ -20,6 +20,8 @@ function ubiq_superadmin_menu() {
 
 function ubiq_register_settings() {
   register_setting('ubiq-network-settings','ubiq_shownavbar');
+  register_setting('ubiq-network-settings','ubiq_liftium_pubid');
+  register_setting('ubiq-network-settings','ubiq_liftium_placement');
   
   register_setting('ubiq-analytics-settings','ubiq_ga_siteid');
   register_setting('ubiq-analytics-settings','ubiq_ga_rollup');
@@ -68,6 +70,37 @@ function ubiq_options_network() {
           </tr>
         </tbody>
       </table>
+      
+      <h3>Liftium</h3>
+      <p>The Liftium tag will be added to a site when the Pub ID is defined.</p>
+      <table class="form-table">
+        <tbody>
+          <tr valign="top">
+            <th scope="row">
+              <label for="ubiq_liftium_pubid">Publisher Id</label>
+            </th>
+            <td>
+              <label for"ubiq_liftium_pubid">
+                <input type="text" id="ubiq_liftium_pubid" name="ubiq_liftium_pubid" value="<?php echo get_option('ubiq_liftium_pubid') ?>" class="small-text" />
+              </label>
+            </td>
+          </tr>
+          
+          <tr valign="top">
+            <th scope="row">
+              <label for="ubiq_liftium_placement">Placement</label>
+            </th>
+            <td>
+              <label for"ubiq_liftium_placement">
+                <input type="text" id="ubiq_liftium_placement" name="ubiq_liftium_placement" value="<?php echo get_option('ubiq_liftium_placement') ?>" class="medium-text" />
+              </label>
+            </td>
+          </tr>
+          
+          
+        </tbody>
+      </table>
+      
       <p class="submit">
         <input class="button-primary" type="submit" value="Save Changes" name="Submit"/>
       </p>
