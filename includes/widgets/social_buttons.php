@@ -16,6 +16,6 @@ if(get_the_author_meta('twitter_handle')) {
 
 ?>
 
-<a href="http://twitter.com/share" class="twitter-share-button" data-url="<?php the_permalink() ?>" data-text="<?php the_title() ?>" data-count="horizontal" data-via="<?php get_option('ubiq_twtr_sitehandle') ?>" data-related="<?php echo $data_related ?>:The author's account.">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+<a href="http://twitter.com/share" class="twitter-share-button" data-url="<?php the_permalink() ?>" data-text="<?php the_title() ?>" data-count="horizontal" data-via="<?php echo get_option('ubiq_twtr_sitehandle') ?>" data-related="<?php echo $data_related ?>:The author's account.">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 
 
