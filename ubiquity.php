@@ -15,7 +15,7 @@ require_once('includes/wp-widgets.php');
 
 // nav bar
 add_action('wp_print_scripts', 'ubiquity_scripts_action', 50);
-add_action('wp_print_scripts', 'ubiq_print_liftium_header', 75);
+add_action('ubiquity_body_scripts', 'ubiq_print_liftium_header', 75);
 add_action('wp_print_styles', 'ubiquity_styles_action');
 add_action('wp_footer','ubiquity_print_tracker_bodybottom');
 
