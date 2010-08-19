@@ -71,6 +71,7 @@
 }
 .ubiq_social_buttons li {
   float: left;
+  margin-right: 8px;
 }
 .ubiq_social_buttons li.fbshr {
   margin-top: 1px;
