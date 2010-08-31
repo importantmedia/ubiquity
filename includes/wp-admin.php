@@ -22,6 +22,7 @@ function ubiq_register_settings() {
   register_setting('ubiq-network-settings','ubiq_shownavbar');
   register_setting('ubiq-network-settings','ubiq_liftium_pubid');
   register_setting('ubiq-network-settings','ubiq_liftium_placement');
+  register_setting('ubiq-network-settings','ubiq_scribol_tag');
   
   register_setting('ubiq-analytics-settings','ubiq_ga_siteid');
   register_setting('ubiq-analytics-settings','ubiq_ga_rollup');
@@ -97,6 +98,24 @@ function ubiq_options_network() {
             </td>
           </tr>
           
+          
+        </tbody>
+      </table>
+      
+      <h3>Scribol</h3>
+      <p>The Scribol tag is placed after the post; before the comments.</p>
+      <table class="form-table">
+        <tbody>
+          <tr valign="top">
+            <th scope="row">
+              <label for="ubiq_scribol_tag">Scribol Tag</label>
+            </th>
+            <td>
+              <label for"ubiq_scribol_tag">
+                <textarea id="ubiq_scribol_tag" name="ubiq_scribol_tag"><?php echo get_option('ubiq_scribol_tag') ?></textarea>
+              </label>
+            </td>
+          </tr>
           
         </tbody>
       </table>
