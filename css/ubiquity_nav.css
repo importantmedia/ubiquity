@@ -153,6 +153,11 @@
 #im-navbar #im-navbar-slider #im-navbar-slidebox #udm #udm_tabs .panel ul li {
   margin-bottom: 10px;
   text-align: center;
+  float: left;
+  width: 100%;
+}
+#im-navbar #im-navbar-slider #im-navbar-slidebox #udm #udm_tabs .panel ul li.row {
+  width: 50%;
 }
 #im-navbar #im-navbar-slider #im-navbar-slidebox #udm #udm_tabs .panel ul li a {
   display: block;
