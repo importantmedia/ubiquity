@@ -142,6 +142,9 @@
 								<li><a title="Inspired Economist" href="http://inspiredeconomist.com?utm_source=importantmedia_corp&utm_medium=navbar&utm_campaign=Universal%2BNavbar" target="_blank">The Inspired Economist</a></li>
 								<li><a title="Ecopreneurist" href="http://ecopreneurist.com?utm_source=importantmedia_corp&utm_medium=navbar&utm_campaign=Universal%2BNavbar" target="_blank">Ecopreneurist</a></li>
 								<li><a title="Green Building Elements" href="http://greenbuildingelements.com?utm_source=importantmedia_corp&utm_medium=navbar&utm_campaign=Universal%2BNavbar" target="_blank">Green Building Elements</a></li>
+								<li><a title="Gas 2.0" href="http://gas2.org?utm_source=importantmedia_corp&utm_medium=navbar&utm_campaign=Universal%2BNavbar" target="_blank">Gas 2.0</a></li>
+								<li><a title="CleanTechnica" href="http://cleantechnica.com?utm_source=importantmedia_corp&utm_medium=navbar&utm_campaign=Universal%2BNavbar" target="_blank">CleanTechnica</a></li>
+								<li><a title="FailDrill" href="http://faildrill.com?utm_source=importantmedia_corp&utm_medium=navbar&utm_campaign=Universal%2BNavbar" target="_blank">FailDrill</a></li>
 							</ul>
 						</div>
 										
@@ -160,9 +163,6 @@
 							<ul>
 								<li><a title="Red, Green and Blue" href="http://redgreenandblue.org?utm_source=importantmedia_corp&utm_medium=navbar&utm_campaign=Universal%2BNavbar">Red, Green &amp; Blue</a></li>
 								<li><a title="EcoLocalizer" href="http://ecolocalizer.com?utm_source=importantmedia_corp&utm_medium=navbar&utm_campaign=Universal%2BNavbar" target="_blank">EcoLocalizer</a></li>
-								<li><a title="Gas 2.0" href="http://gas2.org?utm_source=importantmedia_corp&utm_medium=navbar&utm_campaign=Universal%2BNavbar" target="_blank">Gas 2.0</a></li>
-								<li><a title="CleanTechnica" href="http://cleantechnica.com?utm_source=importantmedia_corp&utm_medium=navbar&utm_campaign=Universal%2BNavbar" target="_blank">CleanTechnica</a></li>
-								<li><a title="FailDrill" href="http://faildrill.com?utm_source=importantmedia_corp&utm_medium=navbar&utm_campaign=Universal%2BNavbar" target="_blank">FailDrill</a></li>
 							</ul>
 						</div>
 						
