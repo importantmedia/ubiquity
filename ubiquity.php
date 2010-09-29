@@ -12,6 +12,7 @@ License: MIT
 require_once('includes/wp-admin.php');
 require_once('includes/wp-social.php');
 require_once('includes/wp-widgets.php');
+require_once('includes/wp-aggregate.php'); 
 
 // nav bar
 add_action('wp_print_scripts', 'ubiquity_scripts_action', 50);

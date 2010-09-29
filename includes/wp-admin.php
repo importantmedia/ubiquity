@@ -23,6 +23,8 @@ function ubiq_register_settings() {
   register_setting('ubiq-network-settings','ubiq_liftium_pubid');
   register_setting('ubiq-network-settings','ubiq_liftium_placement');
   register_setting('ubiq-network-settings','ubiq_scribol_tag');
+  register_setting('ubiq-network-settings','ubiq_aggregate');
+  register_setting('ubiq-network-settings','ubiq_crosspost');
   
   register_setting('ubiq-analytics-settings','ubiq_ga_siteid');
   register_setting('ubiq-analytics-settings','ubiq_ga_rollup');
@@ -117,6 +119,43 @@ function ubiq_options_network() {
             </td>
           </tr>
           
+        </tbody>
+      </table>
+      
+      <h3>Aggregation</h3>
+      <p>The aggregation table provides advanced features that allow for content from one site to exist on another site.</p>
+      <table class="form-table">
+        <tbody>
+          <tr valign="top">
+            <th scope="row">
+              <label for="ubiq_aggregate">Include in aggregation</label>
+            </th>
+            <td>
+              <label for"ubiq_aggregate">
+                <?php 
+                  $check_ubiq_aggregate = '';
+                  if (get_option('ubiq_aggregate'))
+                    $check_ubiq_aggregate = ' checked="checked" ';
+                ?>
+                <input type="checkbox" id="ubiq_aggregate" name="ubiq_aggregate" value="ubiq_aggregate" <?php echo $check_ubiq_aggregate ?> /> Aggregate
+              </label>
+            </td>
+          </tr>
+          <tr valign="top">
+            <th scope="row">
+              <label for="ubiq_crosspost">Allow Crossposting</label>
+            </th>
+            <td>
+              <label for"ubiq_crosspost">
+                <?php 
+                  $check_ubiq_crosspost = '';
+                  if (get_option('ubiq_crosspost'))
+                    $check_ubiq_crosspost = ' checked="checked" ';
+                ?>
+                <input type="checkbox" id="ubiq_crosspost" name="ubiq_crosspost" value="ubiq_crosspost" <?php echo $check_ubiq_crosspost ?> /> Crossposting (aggregation must be enabled, not fully functional)
+              </label>
+            </td>
+          </tr>
         </tbody>
       </table>
       
