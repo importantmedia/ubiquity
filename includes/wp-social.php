@@ -9,7 +9,7 @@ function ubiq_add_socialgraph() {
   if (is_single()) {
   
     $image_id = get_post_thumbnail_id();
-    $image_url = wp_get_attachment_image_src($image_id,’large’, true);
+    $image_url = wp_get_attachment_image_src($image_id,'large', true);
   
     ?>
       <meta property="og:title" content="<?php the_title() ?>"/>
