@@ -1,7 +1,7 @@
 <?php
 
 add_action('wp_head','ubiq_add_socialgraph');
-add_action('wp_footer','ubiq_fb_javascriptapi');
+//add_action('wp_footer','ubiq_fb_javascriptapi');
 
 function ubiq_add_socialgraph() {
   if (!get_option('ubiq_fb_opengraph')) { return; }

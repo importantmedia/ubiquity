@@ -8,9 +8,9 @@
   <div class="widget_body">
     <ul class="panels">
     
-    	<li class="active"><fb:activity site="<?php bloginfo('url') ?>" width="280"
-    		header="false" font="lucida grande" border_color="#fff"
-    		recommendations="false"></fb:activity></li>
+    	<li class="active">
+    		<iframe src="http://www.facebook.com/plugins/activity.php?site=<?php urlencode(bloginfo('url')) ?>&amp;width=280&amp;height=300&amp;header=true&amp;colorscheme=light&amp;font=lucida+grande&amp;border_color=%23fff&amp;recommendations=true" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:280px; height:300px;" allowTransparency="true"></iframe>
+    	</li>
     
     </ul>
   </div>
