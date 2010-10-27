@@ -62,14 +62,26 @@ function ubiquity_print_ga_tracking_header() {
           ['_setAllowHash', false],
           ['_setDomainName', '.<?php echo $blogurl ?>'],
           ['_setAllowLinker',true],
-          ['_trackPageview']<?php if(get_option('ubiq_ga_rollup')) { ?>,
+          ['_trackPageview']
+        );
+        <?php if(get_option('ubiq_ga_rollup')) { ?>
+        _gaq.push(
           ['b._setAccount', 'UA-17151946-1'],
           ['b._setAllowHash', false],
           ['b._setDomainName', '.<?php echo $blogurl ?>'],
           ['b._setAllowLinker',true],
           ['b._trackPageview']
-          <?php } ?>
         );
+        <?php } ?>
+        <?php if( is_single() ) { 
+          global $post;
+          global $blog_id;
+        ?>
+        _gaq.push(
+          ['c._setAccount', 'UA-19342255-1'],
+          ['c._trackPageview', '/blog/<?php echo $blog_id; ?>/author/<?php echo $post->post_author; ?>/']
+        );
+        <?php } ?>
   </script>
   <?php
   }
