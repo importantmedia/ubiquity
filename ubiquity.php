@@ -81,6 +81,14 @@ function ubiquity_print_ga_tracking_header() {
           ['c._setAccount', 'UA-19342255-1'],
           ['c._trackPageview', '/blog/<?php echo $blog_id; ?>/author/<?php echo $post->post_author; ?>/']
         );
+        <?php } else { 
+          global $blog_id;
+        ?>
+        _gaq.push(
+          ['c._setAccount', 'UA-19342255-1'],
+          ['c._trackPageview', '/blog/<?php echo $blog_id; ?>/other/']
+        );
+        
         <?php } ?>
   </script>
   <?php
