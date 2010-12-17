@@ -28,6 +28,7 @@ function ubiq_register_settings() {
   
   register_setting('ubiq-analytics-settings','ubiq_ga_siteid');
   register_setting('ubiq-analytics-settings','ubiq_ga_rollup');
+  register_setting('ubiq-analytics-settings','ubiq_analytics_other');
   
   register_setting('ubiq-social-settings','ubiq_fb_appid');
   register_setting('ubiq-social-settings','ubiq_fb_fanpageid');
@@ -104,13 +105,13 @@ function ubiq_options_network() {
         </tbody>
       </table>
       
-      <h3>Scribol</h3>
-      <p>The Scribol tag is placed after the post; before the comments.</p>
+      <h3>Related Content</h3>
+      <p>The related content tag is placed after the post; before the comments.</p>
       <table class="form-table">
         <tbody>
           <tr valign="top">
             <th scope="row">
-              <label for="ubiq_scribol_tag">Scribol Tag</label>
+              <label for="ubiq_scribol_tag">Script</label>
             </th>
             <td>
               <label for"ubiq_scribol_tag">
@@ -152,7 +153,7 @@ function ubiq_options_network() {
                   if (get_option('ubiq_crosspost'))
                     $check_ubiq_crosspost = ' checked="checked" ';
                 ?>
-                <input type="checkbox" id="ubiq_crosspost" name="ubiq_crosspost" value="ubiq_crosspost" <?php echo $check_ubiq_crosspost ?> /> Crossposting (aggregation must be enabled, not fully functional)
+                <input type="checkbox" id="ubiq_crosspost" name="ubiq_crosspost" value="ubiq_crosspost" <?php echo $check_ubiq_crosspost ?> /> Crossposting (aggregation must be enabled, not yet functional)
               </label>
             </td>
           </tr>
@@ -215,6 +216,23 @@ function ubiq_options_analytics() {
           </tr>
         </tbody>
       </table>
+      
+      <h3>Other Analytics</h3>
+      <table class="form-table">
+        <tbody>
+          <tr valign="top">
+            <th scope="row">
+              <label for="ubiq_analytics_other">Site Profile ID</label>
+            </th>
+            <td>
+              <label for"ubiq_analytics_other">
+                <textarea id="ubiq_analytics_other" name="ubiq_analytics_other"><?php echo get_option('ubiq_analytics_other') ?></textarea>
+              </label>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      
       <p class="submit">
         <input class="button-primary" type="submit" value="Save Changes" name="Submit"/>
       </p>

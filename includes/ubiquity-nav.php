@@ -154,6 +154,8 @@
 							<ul>
 								<li><a title="Eat. Drink. Better." href="http://eatdrinkbetter.com?utm_source=importantmedia_corp&utm_medium=navbar&utm_campaign=Universal%2BNavbar" target="_blank">Eat. Drink. Better.</a></li>
 								<li><a title="Eat. Drink. Better." href="http://greenoptions.com?utm_source=importantmedia_corp&utm_medium=navbar&utm_campaign=Universal%2BNavbar" target="_blank">Green Options</a></li>
+								<li><a title="Blue Living Ideas" href="http://bluelivingideas.com?utm_source=importantmedia_corp&utm_medium=navbar&utm_campaign=Universal%2BNavbar" target="_blank">Blue Living Ideas</a></li>
+								<li><a title="Green Living Ideas" href="http://greenlivingideas.com?utm_source=importantmedia_corp&utm_medium=navbar&utm_campaign=Universal%2BNavbar" target="_blank">Green Living Ideas</a></li>
 							</ul>
 						</div>
 						
