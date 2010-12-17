@@ -196,6 +196,7 @@ function ubiq_custom_avatar($id) {
 }
 
 function ubiq_print_liftium_header() {
+  return;
   if (!is_admin() && get_option('ubiq_liftium_pubid')) {
     ?>
     <script>LiftiumOptions = {pubid: <?php echo get_option('ubiq_liftium_pubid') ?>, placement : "<?php echo get_option('ubiq_liftium_placement') ?>"}</script>
