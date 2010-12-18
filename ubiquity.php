@@ -25,6 +25,9 @@ add_action('wp_footer','ubiquity_print_tracker_bodybottom');
 add_action('wp_head','ubiquity_print_ga_tracking_header');
 add_action('wp_footer','ubiquity_print_ga_tracking_footer');
 
+add_action('wp_head', 'ubiquity_print_customer_analytics_header');
+add_action('wp_footer', 'ubiquity_print_customer_analytics_footer');
+
 add_shortcode('field', 'ubiq_shortcode_field');
 
 function ubiq_shortcode_field($atts) { 
@@ -35,6 +38,19 @@ function ubiq_shortcode_field($atts) {
 	$return = get_post_meta(get_the_ID(), $name, true);
 
 	return $return;
+}
+
+
+function ubiquity_print_customer_analytics_header() {
+  if(!is_admin()) {
+    echo get_option('ubiq_analytics_other');
+  }
+}
+
+function ubiquity_print_customer_analytics_footer() {
+  if(!is_admin()) {
+    echo get_option('ubiq_analytics_footer');
+  }
 }
 
 function ubiquity_print_ga_tracking_footer() {
