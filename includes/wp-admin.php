@@ -28,7 +28,8 @@ function ubiq_register_settings() {
   
   register_setting('ubiq-analytics-settings','ubiq_ga_siteid');
   register_setting('ubiq-analytics-settings','ubiq_ga_rollup');
-  register_setting('ubiq-analytics-settings','ubiq_analytics_other');
+  register_setting('ubiq-analytics-settings','ubiq_analytics_other'); //header
+  register_setting('ubiq-analytics-settings','ubiq_analytics_footer'); //footer
   
   register_setting('ubiq-social-settings','ubiq_fb_appid');
   register_setting('ubiq-social-settings','ubiq_fb_fanpageid');
@@ -222,11 +223,21 @@ function ubiq_options_analytics() {
         <tbody>
           <tr valign="top">
             <th scope="row">
-              <label for="ubiq_analytics_other">Site Profile ID</label>
+              <label for="ubiq_analytics_other">Header Tags</label>
             </th>
             <td>
               <label for"ubiq_analytics_other">
                 <textarea id="ubiq_analytics_other" name="ubiq_analytics_other"><?php echo get_option('ubiq_analytics_other') ?></textarea>
+              </label>
+            </td>
+          </tr>
+          <tr valign="top">
+            <th scope="row">
+              <label for="ubiq_analytics_footer">Footer tags</label>
+            </th>
+            <td>
+              <label for"ubiq_analytics_footer">
+                <textarea id="ubiq_analytics_footer" name="ubiq_analytics_footer"><?php echo get_option('ubiq_analytics_footer') ?></textarea>
               </label>
             </td>
           </tr>
