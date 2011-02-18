@@ -3,6 +3,8 @@
 add_action('wp_head','ubiq_add_socialgraph');
 //add_action('wp_footer','ubiq_fb_javascriptapi');
 
+if (function_exists('sharing_display'))
+  remove_filter('the_excerpt', 'sharing_display', 19);
 
 function ubiq_add_socialgraph() {
   if (!get_option('ubiq_fb_opengraph')) { return; }
@@ -12,8 +14,7 @@ function ubiq_add_socialgraph() {
     $image_id = get_post_thumbnail_id();
     $image_url = wp_get_attachment_image_src($image_id,'large', true);
     
-    if (function_exists('sharing_display'))
-      remove_filter('the_excerpt', 'sharing_display', 19);
+    
   
     ?>
       <meta property="og:title" content="<?php the_title() ?>"/>
@@ -32,8 +33,7 @@ function ubiq_add_socialgraph() {
       <meta property="fb:app_id" content="<?php echo get_option('ubiq_fb_appid') ?>" />
       <?php } ?>
     <?php
-    if (function_exists('sharing_display'))
-      add_filter('the_excerpt', 'sharing_display', 19);
+
   } else if(is_home()) {
     ?>
       <meta property="og:title" content="<?php echo get_bloginfo('name') ?>"/>
