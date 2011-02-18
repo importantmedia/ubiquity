@@ -4,28 +4,28 @@ add_action('wp_head','ubiq_add_socialgraph');
 //add_action('wp_footer','ubiq_fb_javascriptapi');
 
 //to avoid activating filters... get the excerpt manually
-function get_excerpt_outside_loop($post_id){
-  global $wpdb;
-  $query = 'SELECT post_excerpt FROM '. $wpdb->posts .' WHERE ID = '. $post_id .' LIMIT 1';
-  $result = $wpdb->get_results($query, ARRAY_A);
-  $post_excerpt=$result[0]['post_excerpt'];
-  return $post_excerpt;
-}
 
 function ubiq_add_socialgraph() {
   if (!get_option('ubiq_fb_opengraph')) { return; }
 
   if (is_single()) {
     global $post;
-    $thePostID = $post->ID;
     
     $image_id = get_post_thumbnail_id();
     $image_url = wp_get_attachment_image_src($image_id,'large', true);
     
-    if (function_exists('sharing_display')) {
-      remove_filter( 'excerpt_length', 'calculate_excerpt_length' ); 
-      remove_filter( 'the_excerpt', 'sharing_display', 19 );
-    }
+    
+    $content = $post->post_content;
+    $content = strip_shortcodes( $content );
+    		$content = strip_tags($content);
+		$excerpt_length = 55;
+		$words = explode(' ', $content, $excerpt_length + 1);
+		if(count($words) > $excerpt_length) :
+			array_pop($words);
+			array_push($words, '...');
+			$content = implode(' ', $words);
+		endif;
+    
     ?>
       <meta property="og:title" content="<?php the_title() ?>"/>
       <meta property="og:type" content="article"/>
@@ -38,7 +38,7 @@ function ubiq_add_socialgraph() {
       <meta property="og:image" content="<?php header_image(); ?>"/>
       <?php } ?>
       <meta property="og:site_name" content="<?php echo get_bloginfo('name') ?>"/> 
-      <meta property="og:description" content="<?php echo strip_tags( get_excerpt_outside_loop($thePostID) ) ?>"/>
+      <meta property="og:description" content="<?php echo $content ?>"/>
       <?php if (get_option('ubiq_fb_appid')) { ?>
       <meta property="fb:app_id" content="<?php echo get_option('ubiq_fb_appid') ?>" />
       <?php } ?>
