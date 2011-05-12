@@ -79,6 +79,7 @@ function ubiquity_print_ga_tracking_header() {
           ['_setDomainName', '.<?php echo $blogurl ?>'],
           ['_setAllowLinker',true],
           ['_trackPageview']
+          ['_trackPageLoadTime']
         );
         <?php if(get_option('ubiq_ga_rollup')) { ?>
         _gaq.push(
@@ -87,6 +88,7 @@ function ubiquity_print_ga_tracking_header() {
           ['b._setDomainName', '.<?php echo $blogurl ?>'],
           ['b._setAllowLinker',true],
           ['b._trackPageview']
+          ['b._trackPageLoadTime']
         );
         <?php } ?>
         <?php if( is_single() ) { 
