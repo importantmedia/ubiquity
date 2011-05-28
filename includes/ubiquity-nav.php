@@ -127,7 +127,6 @@
 							<p>Air, water, planet, and its ecosystems</p>
 							<ul>
 								<li><a title="Planetsave" href="http://planetsave.com?utm_source=importantmedia_corp&utm_medium=navbar&utm_campaign=Universal%2BNavbar" target="_blank">PlanetSave</a></li>
-								<li><a title="Ecoscraps." href="http://ecoscraps.com?utm_source=importantmedia_corp&utm_medium=navbar&utm_campaign=Universal%2BNavbar" target="_blank">EcoScraps</a></li>
 							</ul>
 						</div>
 						
@@ -135,7 +134,7 @@
 							<h3>Priority 2: Civilization</h3>
 							<p>Business, economics, self-sufficiency, energy, infrastructure, transportation, industrial design</p>
 							<ul>
-								<li><a title="CleanTechnica" href="http://cleantechnica.com?utm_source=importantmedia_corp&utm_medium=navbar&utm_campaign=Universal%2BNavbar" target="_blank">CleanTechnica</a></li>
+								<li><a title="Cleantechnica" href="http://cleantechnica.com?utm_source=importantmedia_corp&utm_medium=navbar&utm_campaign=Universal%2BNavbar" target="_blank">CleanTechnica</a></li>
 								<li><a title="Gas 2.0" href="http://gas2.org?utm_source=importantmedia_corp&utm_medium=navbar&utm_campaign=Universal%2BNavbar" target="_blank">Gas 2.0</a></li>
 								<li><a title="Green Building Elements" href="http://greenbuildingelements.com?utm_source=importantmedia_corp&utm_medium=navbar&utm_campaign=Universal%2BNavbar" target="_blank">Green Building Elements</a></li>
 								<li><a title="Inspired Economist" href="http://inspiredeconomist.com?utm_source=importantmedia_corp&utm_medium=navbar&utm_campaign=Universal%2BNavbar" target="_blank">The Inspired Economist</a></li>
@@ -151,10 +150,10 @@
 							<p>Family, household, community</p>
 							<ul>
 								<li><a title="Eat. Drink. Better." href="http://eatdrinkbetter.com?utm_source=importantmedia_corp&utm_medium=navbar&utm_campaign=Universal%2BNavbar" target="_blank">Eat. Drink. Better.</a></li>
-								<li><a title="Insteading" href="http://insteading.com?utm_source=importantmedia_corp&utm_medium=navbar&utm_campaign=Universal%2BNavbar" target="_blank">Insteading</a> (new!)</li>
+								<li><a title="Insteading" href="http://insteading.com?utm_source=importantmedia_corp&utm_medium=navbar&utm_campaign=Universal%2BNavbar" target="_blank">Insteading new!</a></li>
 								<li><a title="Blue Living Ideas" href="http://bluelivingideas.com?utm_source=importantmedia_corp&utm_medium=navbar&utm_campaign=Universal%2BNavbar" target="_blank">Blue Living Ideas</a></li>
 								<li><a title="Green Living Ideas" href="http://greenlivingideas.com?utm_source=importantmedia_corp&utm_medium=navbar&utm_campaign=Universal%2BNavbar" target="_blank">Green Living Ideas</a></li>
-								<li><a title="Green Options" href="http://greenoptions.com?utm_source=importantmedia_corp&utm_medium=navbar&utm_campaign=Universal%2BNavbar" target="_blank">Green Options</a>, a <a title="HUddler" href="http://huddler.com?utm_source=importantmedia_corp&utm_medium=navbar&utm_campaign=Universal%2BNavbar" target="_blank">Huddler</a> community</li>
+								<li><a title="Green Options" href="http://greenoptions.com?utm_source=importantmedia_corp&utm_medium=navbar&utm_campaign=Universal%2BNavbar" target="_blank">Green Options Community</a></li>
 							</ul>
 						</div>
 						
@@ -176,7 +175,7 @@
 							</ul>
 						</div>
 					</div>
-					<a href="http://importantmedia.org/about/faq/#maslow" id="what"><span class="q">?</span>What is this?</a>
+					<a href="http://importantmedia.org/about/faq/#maslow" target="_blank" id="what"><span class="q">?</span>What is this?</a>
 				</div>
 			</div>
 		</div>
