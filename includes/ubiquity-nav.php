@@ -39,11 +39,12 @@
 
 							</div>
 							<div class="dd-body">
-								<ul class="dd-menu">								
+								<ul class="dd-menu">
+								<li><a href="http://importantmedia.org/about/hiring/" title="We're Hiring!">Central Team</a></li>
 								<li><a href="http://importantmedia.org/write/">Write with IM</a></li>
 								<li class="page_item page-item-393"><a href="http://importantmedia.org/write/contributors/" title="Guest Contributors">Guest Contributors</a></li>
 								<li class="page_item page-item-386"><a href="http://importantmedia.org/write/authors/" title="Freelance Authors">Freelance Authors</a></li>
-								<li><a href="http://importantmedia.org/about/hiring/" title="We're Hiring!">Central Team</a></li>
+								
 								<li class="page_item page-item-406"><a href="http://importantmedia.org/write/apply/" title="Apply">Apply Now!</a></li>
 
 								</ul>
@@ -58,7 +59,7 @@
 							</div>
 							<div class="dd-body">
 								<ul class="dd-menu">
-								<li class="page_item page-item-322"><a href="http://buyads.com/group/important-media" title="Self-service!">Our Network on BuyAds</a></li>
+								<li class="page_item page-item-322"><a href="http://buyads.com/group/important-media" title="Self-service!">Self-service via BuyAds.com</a></li>
 								<li class="page_item page-item-511"><a href="http://importantmedia.org/advertise/quote/" title="Get a Quote">Get a Quote</a></li>
 								<li class="page_item page-item-314"><a href="http://importantmedia.org/advertise/specs/" title="Advertising Specs">Advertising Specs</a></li>
 
@@ -149,8 +150,9 @@
 							<h3>Priority 3: Daily Life</h3>
 							<p>Family, household, community</p>
 							<ul>
+								<li><a title="Insteading" href="http://insteading.com?utm_source=importantmedia_corp&utm_medium=navbar&utm_campaign=Universal%2BNavbar" target="_blank">Insteading (new!)</a></li>
 								<li><a title="Eat. Drink. Better." href="http://eatdrinkbetter.com?utm_source=importantmedia_corp&utm_medium=navbar&utm_campaign=Universal%2BNavbar" target="_blank">Eat. Drink. Better.</a></li>
-								<li><a title="Insteading" href="http://insteading.com?utm_source=importantmedia_corp&utm_medium=navbar&utm_campaign=Universal%2BNavbar" target="_blank">Insteading new!</a></li>
+
 								<li><a title="Blue Living Ideas" href="http://bluelivingideas.com?utm_source=importantmedia_corp&utm_medium=navbar&utm_campaign=Universal%2BNavbar" target="_blank">Blue Living Ideas</a></li>
 								<li><a title="Green Living Ideas" href="http://greenlivingideas.com?utm_source=importantmedia_corp&utm_medium=navbar&utm_campaign=Universal%2BNavbar" target="_blank">Green Living Ideas</a></li>
 								<li><a title="Green Options" href="http://greenoptions.com?utm_source=importantmedia_corp&utm_medium=navbar&utm_campaign=Universal%2BNavbar" target="_blank">Green Options Community</a></li>
