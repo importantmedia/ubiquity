@@ -2,13 +2,13 @@
 	<div id="im-navbar">
 		<div id="im-navbar-inner">
 			<div id="im-network">
-				<a href="<?php echo  get_bloginfo('url') ?>" id="important_media_network">Important Media Network&nbsp;&nbsp;&nbsp;&darr;</a>
+				<a href="<?php echo  get_bloginfo('url') ?>" id="important_media_network">Important Media Network&nbsp;&nbsp;&nbsp;&darr;&nbsp;&nbsp;(click to expand once page loads)</a>
 			</div>
 			<div id="im-sociallinks">
 				<ul>
 					<li><a href="<?php echo  get_permalink(ubiq_get_ID_by_slug('feeds')) ?>" class="icon icn16-rss" title="RSS">RSS</a></li>
 					<li><a href="http://twitter.com/importantmedia" class="icon icn16-twitter" name="@importantmedia" title="Twitter" target="_blank">@importantmedia</a></li>
-					<li><a href="http://www.facebook.com/pages/Important-Media/125494827481361" class="icon icn16-fb" title="Facebook" target="_blank">Facebook</a></li>
+					<li><a href="http://www.facebook.com/importantmedia" class="icon icn16-fb" title="Facebook" target="_blank">Facebook</a></li>
 					
 				</ul>
 			</div>
@@ -21,12 +21,11 @@
 								<div class="dd-body">
 
 									<ul class="dd-menu">
-										<li><a href="http://importantmedia.org/about/">Learn about IM</a></li>
-									<li class="page_item page-item-6"><a href="http://importantmedia.org/about/announcements/" title="Announcements">Announcements</a></li>
-<li class="page_item page-item-623"><a href="http://importantmedia.org/about/faq/" title="FAQ">FAQ</a></li>
-<li class="page_item page-item-300"><a href="http://importantmedia.org/about/people/" title="People">People</a></li>
-<li class="page_item page-item-99"><a href="http://importantmedia.org/about/legal/" title="Legal">Legal</a></li>
-<li class="page_item page-item-463"><a href="http://importantmedia.org/about/contact/" title="Contact">Contact</a></li>
+									<li><a href="http://importantmedia.org/about/">Learn about IM</a></li>
+									<li class="page_item page-item-623"><a href="http://importantmedia.org/about/faq/" title="FAQ">FAQ</a></li>
+									<li class="page_item page-item-300"><a href="http://importantmedia.org/about/people/" title="People">People</a></li>
+									<li class="page_item page-item-99"><a href="http://importantmedia.org/about/legal/" title="Legal">Legal</a></li>
+									<li class="page_item page-item-463"><a href="http://importantmedia.org/about/contact/" title="Contact">Contact</a></li>
 									</ul>
 
 								</div>
@@ -36,16 +35,16 @@
 					<li>
 						<div class="dropdown">
 							<div class="dd-header">
-								<a href="http://importantmedia.org/write/" class="menu-title">Write</a>
+								<a href="http://importantmedia.org/write/" class="menu-title">Join Us</a>
 
 							</div>
 							<div class="dd-body">
-								<ul class="dd-menu">
+								<ul class="dd-menu">								
 								<li><a href="http://importantmedia.org/write/">Write with IM</a></li>
 								<li class="page_item page-item-393"><a href="http://importantmedia.org/write/contributors/" title="Guest Contributors">Guest Contributors</a></li>
-<li class="page_item page-item-386"><a href="http://importantmedia.org/write/authors/" title="Freelance Authors">Freelance Authors</a></li>
-<li class="page_item page-item-362"><a href="http://importantmedia.org/write/editors/" title="Site Editors">Site Editors</a></li>
-<li class="page_item page-item-406"><a href="http://importantmedia.org/write/apply/" title="Apply">Apply</a></li>
+								<li class="page_item page-item-386"><a href="http://importantmedia.org/write/authors/" title="Freelance Authors">Freelance Authors</a></li>
+								<li><a href="http://importantmedia.org/about/hiring/" title="We're Hiring!">Central Team</a></li>
+								<li class="page_item page-item-406"><a href="http://importantmedia.org/write/apply/" title="Apply">Apply Now!</a></li>
 
 								</ul>
 							</div>
@@ -59,11 +58,9 @@
 							</div>
 							<div class="dd-body">
 								<ul class="dd-menu">
-									<li><a href="http://importantmedia.org/advertise/">Advertise on IM</a></li>
+								<li class="page_item page-item-322"><a href="http://buyads.com/group/important-media" title="Self-service!">Our Network on BuyAds</a></li>
+								<li class="page_item page-item-511"><a href="http://importantmedia.org/advertise/quote/" title="Get a Quote">Get a Quote</a></li>
 								<li class="page_item page-item-314"><a href="http://importantmedia.org/advertise/specs/" title="Advertising Specs">Advertising Specs</a></li>
-<li class="page_item page-item-317"><a href="http://importantmedia.org/advertise/rates/" title="Rates">Rates</a></li>
-<li class="page_item page-item-322"><a href="http://importantmedia.org/advertise/calendar/" title="Calendar">Calendar</a></li>
-<li class="page_item page-item-511"><a href="http://importantmedia.org/advertise/quote/" title="Get a Quote">Get a Quote</a></li>
 
 								</ul>
 							</div>
@@ -86,7 +83,6 @@
 								<ul class="dd-menu">
 									<li><a href="<?php echo admin_url()?>" title="Dashboard">Dashboard</a></li>
 									<li><a href="<?php echo admin_url()?>profile.php" title="My Profile">My Profile</a></li>
-									<li><a href="http://p2.importantmedia.org" title="Watercooler">Watercooler</a></li>
 									<li><a href="<?php echo wp_logout_url( get_permalink() ); ?>" title="Logout">Logout</a></li>
 								</ul>
 							</div>
@@ -139,12 +135,14 @@
 							<h3>Priority 2: Civilization</h3>
 							<p>Business, economics, self-sufficiency, energy, infrastructure, transportation, industrial design</p>
 							<ul>
+								<li><a title="CleanTechnica" href="http://cleantechnica.com?utm_source=importantmedia_corp&utm_medium=navbar&utm_campaign=Universal%2BNavbar" target="_blank">CleanTechnica</a></li>
+								<li><a title="Gas 2.0" href="http://gas2.org?utm_source=importantmedia_corp&utm_medium=navbar&utm_campaign=Universal%2BNavbar" target="_blank">Gas 2.0</a></li>
+								<li><a title="Green Building Elements" href="http://greenbuildingelements.com?utm_source=importantmedia_corp&utm_medium=navbar&utm_campaign=Universal%2BNavbar" target="_blank">Green Building Elements</a></li>
 								<li><a title="Inspired Economist" href="http://inspiredeconomist.com?utm_source=importantmedia_corp&utm_medium=navbar&utm_campaign=Universal%2BNavbar" target="_blank">The Inspired Economist</a></li>
 								<li><a title="Ecopreneurist" href="http://ecopreneurist.com?utm_source=importantmedia_corp&utm_medium=navbar&utm_campaign=Universal%2BNavbar" target="_blank">Ecopreneurist</a></li>
-								<li><a title="Green Building Elements" href="http://greenbuildingelements.com?utm_source=importantmedia_corp&utm_medium=navbar&utm_campaign=Universal%2BNavbar" target="_blank">Green Building Elements</a></li>
-								<li><a title="CleanTechnica" href="http://cleantechnica.com?utm_source=importantmedia_corp&utm_medium=navbar&utm_campaign=Universal%2BNavbar" target="_blank">CleanTechnica</a></li>
-								<li class="row"><a title="Gas 2.0" href="http://gas2.org?utm_source=importantmedia_corp&utm_medium=navbar&utm_campaign=Universal%2BNavbar" target="_blank">Gas 2.0</a></li>
-								<li class="row"><a title="FailDrill" href="http://faildrill.com?utm_source=importantmedia_corp&utm_medium=navbar&utm_campaign=Universal%2BNavbar" target="_blank">FailDrill</a></li>
+								
+								
+								
 							</ul>
 						</div>
 										
@@ -153,9 +151,10 @@
 							<p>Family, household, community</p>
 							<ul>
 								<li><a title="Eat. Drink. Better." href="http://eatdrinkbetter.com?utm_source=importantmedia_corp&utm_medium=navbar&utm_campaign=Universal%2BNavbar" target="_blank">Eat. Drink. Better.</a></li>
-								<li><a title="Eat. Drink. Better." href="http://greenoptions.com?utm_source=importantmedia_corp&utm_medium=navbar&utm_campaign=Universal%2BNavbar" target="_blank">Green Options</a></li>
+								<li><a title="Insteading" href="http://insteading.com?utm_source=importantmedia_corp&utm_medium=navbar&utm_campaign=Universal%2BNavbar" target="_blank">Insteading</a> (new!)</li>
 								<li><a title="Blue Living Ideas" href="http://bluelivingideas.com?utm_source=importantmedia_corp&utm_medium=navbar&utm_campaign=Universal%2BNavbar" target="_blank">Blue Living Ideas</a></li>
 								<li><a title="Green Living Ideas" href="http://greenlivingideas.com?utm_source=importantmedia_corp&utm_medium=navbar&utm_campaign=Universal%2BNavbar" target="_blank">Green Living Ideas</a></li>
+								<li><a title="Green Options" href="http://greenoptions.com?utm_source=importantmedia_corp&utm_medium=navbar&utm_campaign=Universal%2BNavbar" target="_blank">Green Options</a>, a <a title="HUddler" href="http://huddler.com?utm_source=importantmedia_corp&utm_medium=navbar&utm_campaign=Universal%2BNavbar" target="_blank">Huddler</a> community</li>
 							</ul>
 						</div>
 						
@@ -177,7 +176,7 @@
 							</ul>
 						</div>
 					</div>
-					<a href="<?php echo get_permalink(ubiq_get_ID_by_slug('about/faq')); ?>#maslow" id="what"><span class="q">?</span>What is this?</a>
+					<a href="http://importantmedia.org/about/faq/#maslow" id="what"><span class="q">?</span>What is this?</a>
 				</div>
 			</div>
 		</div>
