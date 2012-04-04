@@ -3,7 +3,7 @@
 Plugin Name: Ubiquity Toolbar
 Plugin URI: http://p2.importantmedia.org
 Description: The Everything Plugin for the Important Media Network
-Version: 0.2
+Version: 0.3
 Author: Important Media
 Author URI: http://importantmedia.org
 License: MIT
